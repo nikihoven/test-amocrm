@@ -1,0 +1,33 @@
+.page {
+  font-family: var(--font-main);
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light);
+
+  &__body {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.container {
+  max-width: 1208px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 1365px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+.header {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-light-primary);
+
+  .container {
+    @media screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      gap: unset;
+    }
+  }
+
+  &__logo {
+    width: 41px;
+    height: 40px;
+
+    @media screen and (max-width: 767px) {
+      flex: 0 0 50%;
+      order: 0;
+      padding: 0 0 0 20px;
+    }
+  }
+
+  &__search {
+    position: relative;
+    flex: 1 0 auto;
+    height: 40px;
+    padding: 12px 12px 12px 40px;
+    border: 1px var(--color-gray-tertiary) solid;
+    border-radius: 5px;
+
+    @media screen and (max-width: 767px) {
+      order: 2;
+      border-radius: unset;
+      border-left: unset;
+      border-right: unset;
+    }
+
+    &::before {
+      content: url("images/search.svg");
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 10px;
+      width: 24px;
+      height: 24px;
+    }
+
+    input {
+      font-size: 14px;
+      color: var(--color-dark);
+
+      &::placeholder {
+        font-family: var(--font-main);
+        letter-spacing: 0.01em;
+        font-weight: 400;
+        color: var(--color-gray-secondary);
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 20px;
+    gap: 10px;
+    border-left: 1px var(--color-gray-tertiary) solid;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      align-items: unset;
+      flex: 0 0 50%;
+      justify-content: flex-end;
+      order: 1;
+      padding: 0 20px 0 0;
+      gap: unset;
+      border-left: unset;
+    }
+
+    .profile {
+      &__name {
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        font-weight: 400;
+        color: var(--color-gray-primary);
+
+        @media screen and (max-width: 767px) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @media screen and (max-width: 767px) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      &__icon {
+        display: none;
+        visibility: hidden;
+
+        @media screen and (max-width: 767px) {
+          display: block;
+          visibility: visible;
+          width: 24px;
+          height: 24px;
+          margin: 26px 0 23px;
+        }
+      }
+    }
+  }
+}
